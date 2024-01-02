@@ -7,7 +7,7 @@ import { Socket, io } from 'socket.io-client'
 const ChatScreen = () => {
   const socket = useRef<Socket>()
 
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState<string[]>([])
   // State to store the current message
   const [currentMessage, setCurrentMessage] = useState('')
 
@@ -44,7 +44,7 @@ const ChatScreen = () => {
     socket.current = io('ws://localhost:5000')
 
     socket.current?.on('message', (message) => {
-      setMessages((prevMessages) => [...prevMessages, message])
+      setMessages((prevMessages: string[]) => [...prevMessages, message])
     })
 
     return () => {

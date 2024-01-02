@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-const ChatBox: React.FC = ({ messages }) => {
+const ChatBox: React.FC<{ messages: string[] }> = ({ messages }) => {
   // const messageBox = useRef<HTMLDivElement>(null)
 
   //   useEffect(() => {

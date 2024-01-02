@@ -7,7 +7,7 @@ export function MyForm() {
   const [value, setValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
-  function onSubmit(event) {
+  function onSubmit(event: any) {
     event.preventDefault()
     setIsLoading(true)
 

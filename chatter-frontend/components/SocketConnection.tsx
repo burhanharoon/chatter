@@ -2,9 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { socket } from '../socket'
-import ConnectionState from './ConnectionState'
-import { Events } from './Events'
-import { ConnectionManager } from './ConnectionManager'
 import { MyForm } from './MyForm'
 // import { ConnectionState } from './components/ConnectionState'
 // import { ConnectionManager } from './components/ConnectionManager'
@@ -47,9 +44,6 @@ const SocketConnection = () => {
 
   return (
     <div>
-      <ConnectionState isConnected={isConnected} />
-      <Events events={fooEvents} />
-      <ConnectionManager />
       <MyForm />
     </div>
   )
